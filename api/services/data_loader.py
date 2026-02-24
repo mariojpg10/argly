@@ -369,3 +369,15 @@ def get_rio_by_nombre(nombre: str):
             return rio
 
     return None
+
+
+# -------- CONSTRUCCIÓN (ICC) --------
+
+
+def get_construccion():
+    """
+    Devuelve el último dato de costo de construcción (ICC)
+    """
+    data = _load_latest("construccion")
+    # Como guardamos la data dentro de una lista [{}], retornamos el primer elemento
+    return data[0] if data else None

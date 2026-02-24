@@ -44,6 +44,9 @@ El proyecto está pensado como **fuente de verdad basada en JSON**, con una API 
   - Nivel de los ríos en cada puerto
   - Nivel de un río específico
 
+- 🧱 **ICC (Índice del Costo de la Construcción)**
+  - Costo de la construcción en pesos y variaciones porcentuales vigentes
+
 ## 🌐 Endpoints disponibles
 
 La API se encuentra disponible públicamente en: `https://api.argly.com.ar`
@@ -172,6 +175,16 @@ GET /api/rios
 GET /api/rios/rio/<nombre_rio>
 ```
 
+---
+
+### 🧱 ICC
+
+**Costo de la construcción en pesos y variaciones porcentuales del mes en curso**
+
+```
+GET /api/construccion
+```
+
 ## 🔄 Actualización de datos
 
 Los datos se mantienen actualizados mediante **GitHub Actions (cron jobs)**:
@@ -181,7 +194,8 @@ Los datos se mantienen actualizados mediante **GitHub Actions (cron jobs)**:
 - 📉 IPC: **día 10, 11, 12, 13 y 14 de cada mes**
 - 🏠 UVI: **todos los días a las 09:00, 10:00 y 11:00**
 - 🏦 UVA: **todos los días a las 09:00, 10:00 y 11:00**
-- 🌊 Ríos: **todos los días a las 09:30 y 12:30**
+- 🌊 Ríos: **todos los días a las 12:30**
+- 🧱 ICC: **día 15, 16 y 17 de cada mes**
 
 ## 🧪 Desarrollo local
 
