@@ -4,6 +4,7 @@
 ![IPC](https://github.com/William10101995/argly/actions/workflows/ipc.yml/badge.svg)
 ![UVA](https://github.com/William10101995/argly/actions/workflows/uva.yml/badge.svg)
 ![UVI](https://github.com/William10101995/argly/actions/workflows/uvi.yml/badge.svg)
+![ICC](https://github.com/William10101995/argly/actions/workflows/construccion.yml/badge.svg)
 ![RIOS](https://github.com/William10101995/argly/actions/workflows/rios.yml/badge.svg)
 ![Combustibles](https://github.com/William10101995/argly/actions/workflows/combustibles.yml/badge.svg)
 [![Base URL API](https://img.shields.io/badge/website-online-brightgreen)](https://argly.com.ar)
