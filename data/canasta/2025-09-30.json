@@ -1,0 +1,51 @@
+{
+  "periodo": "2025-09",
+  "fecha_publicacion": null,
+  "fuente": "INDEC - Dirección Nacional de Estadísticas de Precios",
+  "cba": {
+    "variacion_mensual": 1.4,
+    "variacion_acumulada_anio": 17.5,
+    "variacion_interanual": 23.1,
+    "adulto_equivalente": 170788.46,
+    "hogares": {
+      "hogar_1": {
+        "integrantes": 3,
+        "descripcion": "Mujer de 35 años, hijo de 18 años y madre de 61 años",
+        "valor": 420139.61
+      },
+      "hogar_2": {
+        "integrantes": 4,
+        "descripcion": "Varón de 35 años, mujer de 31 años, hijo de 6 años e hija de 8 años",
+        "valor": 527736.34
+      },
+      "hogar_3": {
+        "integrantes": 5,
+        "descripcion": "Varón y mujer de 30 años con hijos de 1, 3 y 5 años",
+        "valor": 555062.5
+      }
+    }
+  },
+  "cbt": {
+    "variacion_mensual": 1.4,
+    "variacion_acumulada_anio": 14.9,
+    "variacion_interanual": 22.0,
+    "adulto_equivalente": 380858.27,
+    "hogares": {
+      "hogar_1": {
+        "integrantes": 3,
+        "descripcion": "Mujer de 35 años, hijo de 18 años y madre de 61 años",
+        "valor": 936911.34
+      },
+      "hogar_2": {
+        "integrantes": 4,
+        "descripcion": "Varón de 35 años, mujer de 31 años, hijo de 6 años e hija de 8 años",
+        "valor": 1176852.05
+      },
+      "hogar_3": {
+        "integrantes": 5,
+        "descripcion": "Varón y mujer de 30 años con hijos de 1, 3 y 5 años",
+        "valor": 1237789.38
+      }
+    }
+  }
+}

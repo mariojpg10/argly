@@ -31,6 +31,11 @@ El proyecto está pensado como **fuente de verdad basada en JSON**, con una API 
   - Histórico
   - Histórico por rango de fechas
 
+* 🛒 **Canasta Básica (CBA y CBT)**
+  - Último período publicado completo
+  - Histórico completo
+  - Histórico por rango de fechas
+
 - 🏠 **UVI (Unidad de Vivienda)**
   - Valor vigente del UVI
   - Histórico
@@ -133,6 +138,26 @@ GET /api/ipc/history
 GET /api/ipc/range?desde=AAAA-MM&hasta=AAAA-MM
 ```
 
+### 🛒 Canasta Básica
+
+**Último período publicado (CBA + CBT)**
+
+```
+GET /api/canasta
+```
+
+**Histórico completo**
+
+```
+GET /api/canasta/history
+```
+
+**Canasta en un rango de fechas**
+
+```
+GET /api/canasta/range?desde=AAAA-MM&hasta=AAAA-MM
+```
+
 ### 🏠 UVI
 
 **Valor y fecha de publicación de la UVI del día en curso**
@@ -215,10 +240,10 @@ El modelo utiliza heurísticas financieras basadas en:
 - días de atraso
 - flags legales
 - ratio deuda/ingreso
-- TNA personalizada
+- TEA personalizada
 
 ```
-GET /api/credito/<cuil>/<salario_mensual>/<tna>
+GET /api/credito/<cuil>/<salario_mensual>/<tea>
 ```
 
 - El modelo de scoring crediticio es **heurístico** y está diseñado para evaluación preliminar de riesgo.
@@ -260,6 +285,7 @@ Los datos se mantienen actualizados mediante **GitHub Actions (cron jobs)**:
 - 🏦 UVA: **todos los días a las 09:00, 10:00 y 11:00**
 - 🌊 Ríos: **todos los días a las 12:30**
 - 🧱 ICC: **día 15, 16 y 17 de cada mes**
+- 🛒 Canasta: **día 12, 13, 14 y 15 de cada mes**
 
 ## 🧪 Desarrollo local
 

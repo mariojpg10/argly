@@ -273,9 +273,9 @@ def loan_decision(score, pd, dti):
     return "REVISION"
 
 
-def calculate_credit_profile(cuil, salary, tna):
+def calculate_credit_profile(cuil, salary, tea):
 
-    annual_rate = tna / 100
+    annual_rate = tea / 100
 
     bcra_data = get_bcra_data(cuil)
 
@@ -308,7 +308,7 @@ def calculate_credit_profile(cuil, salary, tna):
         "prestamo_maximo_recomendado": round(loan_amount),
         "cuota_mensual_estimada": round(monthly_installment),
         "plazo_prestamo_meses": term,
-        "tna": tna,
+        "tea": tea,
         "total_a_pagar": round(total_payment),
         "intereses_totales": round(interest_paid),
         "perdida_esperada": round(expected_loss),

@@ -394,3 +394,54 @@ def get_provincias():
     if not data:
         return None
     return data
+
+
+# -------- CANASTA --------
+
+
+def get_canasta():
+    data = _load_latest("canasta")
+    return data if data else None
+
+
+def get_canasta_history():
+    canasta_path = BASE_DATA_PATH / "canasta"
+
+    if not canasta_path.exists():
+        return []
+
+    files = [
+        f
+        for f in canasta_path.iterdir()
+        if f.suffix == ".json" and f.name != "latest.json"
+    ]
+
+    result = []
+
+    for file in files:
+        try:
+            with open(file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            if not data:
+                continue
+
+            result.append(data)
+
+        except Exception:
+            continue
+
+    result.sort(key=lambda x: x["periodo"])
+    return result
+
+
+def get_canasta_range(desde: str, hasta: str):
+    historico = get_canasta_history()
+
+    try:
+        datetime.strptime(desde, "%Y-%m")
+        datetime.strptime(hasta, "%Y-%m")
+    except ValueError:
+        return []
+
+    return [item for item in historico if desde <= item["periodo"] <= hasta]
